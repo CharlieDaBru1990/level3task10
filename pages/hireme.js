@@ -1,8 +1,19 @@
 import Image from 'next/image';
 import hirePic from "../static/My-Weather-App.png"
 import Layout from '../components/Layout';
+import Script from 'next/script'
+function gtag(){dataLayer.push(arguments);}
 
 const HireMe = () => (
+    <div>
+    <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-241661607-1"/>
+<Script>
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-241661607-1');`}
+</Script>
 
     <Layout title="Hire Me">
         <p>
@@ -24,7 +35,7 @@ const HireMe = () => (
                     target="_blank">Code for my weather app</a>.
             </p>
             
-    </Layout>
+    </Layout> </div>
 )
 
 export default HireMe;

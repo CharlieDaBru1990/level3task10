@@ -2,8 +2,21 @@ import Image from "next/image";
 import aboutImage from "../static/Chalton Prins Profile.jpeg"
 import Link from "next/link";
 import Layout from "../components/Layout";
+import Script from 'next/script'
 
 export default () => (
+    <div>
+    
+<Script async src="https://www.googletagmanager.com/gtag/js?id=UA-241661607-1"/>
+<Script>
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-241661607-1');`}
+</Script>
+
+   
     <Layout title="About">
         <Link href="/">
             <a>Go to Home</a>
@@ -19,5 +32,5 @@ export default () => (
         <Image src={ aboutImage } width="300" height="300"/>
         
 
-    </Layout>
+    </Layout> </div>
 );
